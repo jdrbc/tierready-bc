@@ -112,7 +112,8 @@ export default function HomePage() {
           <h2>Email Minister Kelly Greene</h2>
           <p className="lede">
             Ask Minister Greene to adopt tiered Alert Ready. Cite CRTC 2025-180. CC your
-            MLA.
+            MLA. Also <Link to="/complain">file CRTC and BC complaints</Link> about
+            overnight province-wide targeting.
           </p>
           <div className="action-layout">
             <div className="contact-block">

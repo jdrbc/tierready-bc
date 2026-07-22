@@ -8,6 +8,7 @@ Advocacy website urging British Columbia to use **tiered Alert Ready / Wireless 
 ## Pages
 
 - **Home** (`/`) — overview of the single-tier problem, alert counts, estimated sleep disruption, and CTAs to email the Minister / contact your MLA (with copyable letter).
+- **Complain** (`/complain`) — how to file with the CRTC and BC EMCR about overnight province-wide targeting / DND override.
 - **Workarounds** (`/workarounds`) — airplane mode, power off, phone-away-from-bed, and accurate guidance that uninstalling apps does **not** stop cell-broadcast Alert Ready, plus a guided helper.
 
 ## Develop

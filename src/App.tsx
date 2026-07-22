@@ -28,7 +28,7 @@ export default function App() {
         <nav className="nav-links" aria-label="Primary">
           <Link to="/#how-it-works">Overview</Link>
           <Link to="/#the-cost">The cost</Link>
-          <Link to="/workarounds">Workarounds</Link>
+          <Link to="/complain">Complain</Link>
           <Link className="nav-cta" to="/#take-action">
             Take action
           </Link>
@@ -62,6 +62,8 @@ export default function App() {
           </p>
           <p>
             <Link to="/">Home</Link>
+            {' · '}
+            <Link to="/complain">Complain</Link>
             {' · '}
             <Link to="/workarounds">Workarounds</Link>
             {' · '}

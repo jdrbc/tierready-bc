@@ -445,12 +445,59 @@
   font-size: 1.05rem;
 }
 
+.complaint-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: start;
+}
+
+.complaint-card h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  max-width: none;
+  margin-bottom: 0.75rem;
+}
+
+.complaint-card h3 {
+  font-size: 1.1rem;
+  margin: 1.25rem 0 0.55rem;
+}
+
+.complaint-card p {
+  color: var(--ink-soft);
+}
+
+.complaint-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--ink-soft);
+  display: grid;
+  gap: 0.4rem;
+}
+
+.complaint-note {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.98rem;
+}
+
+.complaint-letter {
+  margin-top: var(--space-4);
+}
+
 .note-callout {
   margin-top: var(--space-3);
   padding: 1rem 0 0;
   border-top: 2px solid var(--signal);
   max-width: 42rem;
   color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .complaint-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @keyframes rise-in {
