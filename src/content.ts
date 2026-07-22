@@ -1,18 +1,14 @@
 export const MINISTER_LETTER = `Dear Minister,
 
-I am writing to request that BC update our use of Alert Ready to use the tiered coding capabilities already built into modern mobile devices.
+Please have BC use the tiered alert codes already built into modern phones for Alert Ready / Wireless Public Alerting.
 
-Currently, the mandate to send all notifications at the "highest priority" level—regardless of the type of emergency—overrides user settings and "Do Not Disturb" modes.
+Right now every wireless alert uses the highest priority level, no matter the emergency type. That overrides Do Not Disturb and wakes people across the province for alerts they often cannot act on.
 
-This leads to alert fatigue and causes many to silence their phones entirely. If you review online discussions of this topic you will see that citizens are showing this exhaustion by:
+Alert fatigue shows up as airplane mode at night, phones off or away from bed, disabling “severe” alerts (which turns off all Canadian wireless alerts), and uninstalling apps that do not actually stop cell-broadcast Alert Ready.
 
-- disabling the severe alert level (opting out of all alerts since it is not possible to configure each tier),
-- keeping phones in airplane mode at night,
-- turning phones off at night,
-- keeping phones away from the bedside at night,
-- or even uninstalling the alerting software entirely
+Use distinct codes by alert type: keep mandatory full blast for immediate life threats, and lower tiers for other messages. That keeps the system safer and more trusted.
 
-I urge the adoption of tiered alerting make use of the existing distinct codes for each type of alert. This will prevent alert fatigue and make the system more useful and safe.`
+Sincerely,`
 
 export const MINISTER_EMAIL = 'EMCR.Minister@gov.bc.ca'
 export const MINISTER_MAILTO = `mailto:${MINISTER_EMAIL}?subject=${encodeURIComponent(

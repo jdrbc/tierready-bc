@@ -27,7 +27,7 @@ export default function App() {
           <span className="mark">BC</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">
-          <Link to="/#how-it-works">How it works</Link>
+          <Link to="/#how-it-works">Overview</Link>
           <Link to="/#the-cost">The cost</Link>
           <Link to="/workarounds">Workarounds</Link>
           <Link className="nav-cta" to="/#take-action">
