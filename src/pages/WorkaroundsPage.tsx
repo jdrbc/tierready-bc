@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useReveal } from '../App'
+import { useReveal } from '../useReveal'
 
 type Goal = 'sleep' | 'quiet-day' | 'understand' | 'stay-safe'
 

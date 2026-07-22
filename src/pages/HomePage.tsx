@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useReveal } from '../App'
+import { useReveal } from '../useReveal'
 import HeroVisual from '../components/HeroVisual'
 import { MINISTER_EMAIL, MINISTER_LETTER, MINISTER_MAILTO } from '../content'
 

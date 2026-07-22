@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import './App.css'
 
@@ -64,30 +64,4 @@ export default function App() {
       </footer>
     </div>
   )
-}
-
-export function useReveal<T extends HTMLElement>() {
-  const ref = useRef<T | null>(null)
-
-  useEffect(() => {
-    const node = ref.current
-    if (!node) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
-            observer.unobserve(entry.target)
-          }
-        }
-      },
-      { threshold: 0.16 },
-    )
-
-    observer.observe(node)
-    return () => observer.disconnect()
-  }, [])
-
-  return ref
 }
