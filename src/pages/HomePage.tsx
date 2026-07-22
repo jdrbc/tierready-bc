@@ -29,7 +29,8 @@ export default function HomePage() {
         </div>
         <div className="hero-content">
           <div className="hero-brand">
-            TierReady <span>BC</span>
+            BC Alert Reform
+            <span className="hero-tagline">Sensible alerting</span>
           </div>
           <h1>Every BC Alert Ready message uses maximum priority</h1>
           <p className="hero-support">
