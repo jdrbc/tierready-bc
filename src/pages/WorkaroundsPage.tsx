@@ -4,35 +4,27 @@ import { useReveal } from '../useReveal'
 
 type Goal = 'sleep' | 'quiet-day' | 'understand' | 'stay-safe'
 
-const GUIDANCE: Record<
-  Goal,
-  { title: string; body: string; next: string }
-> = {
+const GUIDANCE: Record<Goal, { title: string; body: string }> = {
   sleep: {
-    title: 'If you need sleep tonight',
-    body: 'Airplane mode (or powering the phone off) will block Alert Ready while enabled, because cell broadcast needs a cellular connection. Put a reminder to restore connectivity in the morning. Keeping the phone in another room may help, but the alert can still sound.',
-    next: 'These are temporary personal workarounds. The lasting fix is tiered alerts so overnight interruption matches true urgency.',
+    title: 'Need sleep tonight',
+    body: 'Airplane mode or powering off blocks Alert Ready while enabled (cell broadcast needs a cellular link). Set a morning reminder to reconnect. Another room may help you sleep through the tone; the alert still arrives.',
   },
   'quiet-day': {
-    title: 'If you want fewer interruptions during the day',
-    body: 'Do Not Disturb is unreliable for Alert Ready—many devices still play the tone. There is no official Canadian setting to keep “true emergencies” while muting other Alert Ready categories, because everything uses the same highest tier.',
-    next: 'That missing control is exactly what tiered alerting would restore. Contact your MLA and the Minister from the home page.',
+    title: 'Want fewer interruptions',
+    body: 'Do Not Disturb often fails for Alert Ready. Canada has no setting to keep true emergencies while muting other Alert Ready categories—everything uses the same top tier. That control is what tiered alerting would add.',
   },
   understand: {
-    title: 'If you are trying to uninstall “the alert app”',
-    body: 'Alert Ready wireless alerts are not delivered by a consumer app you can uninstall. They arrive via carrier cell broadcast. Removing WeatherCAN, news apps, or local notification apps will not stop Alert Ready.',
-    next: 'You can still manage optional app notifications separately. For Alert Ready itself, only connectivity changes (airplane mode / power off) reliably silence it.',
+    title: 'Trying to uninstall “the alert app”',
+    body: 'Alert Ready is cell broadcast from your carrier, not a consumer app. Removing WeatherCAN or local alert apps will not stop it. Only airplane mode or power off reliably silences WPA.',
   },
   'stay-safe': {
-    title: 'If you want to stay reachable for real emergencies',
-    body: 'Keep cellular connectivity on when you can. Learn what an Alert Ready tone means, and keep PreparedBC / local emergency info bookmarked. Blunt workarounds that silence everything also silence the alerts you may need.',
-    next: 'Advocate for tiers so the system can stay loud for life-threatening events without exhausting everyone with one-volume-fits-all pings.',
+    title: 'Stay reachable for real emergencies',
+    body: 'Keep cellular on when you can. Blunt workarounds that silence everything also silence the alerts you may need. Push for tiers so life-threatening warnings can stay loud without one volume for every message.',
   },
 }
 
 export default function WorkaroundsPage() {
   const listRef = useReveal<HTMLDivElement>()
-  const assistantRef = useReveal<HTMLDivElement>()
   const [goal, setGoal] = useState<Goal>('sleep')
   const advice = useMemo(() => GUIDANCE[goal], [goal])
 
@@ -40,12 +32,10 @@ export default function WorkaroundsPage() {
     <main id="main">
       <section className="page-hero">
         <div className="section-inner">
-          <h1>What people do when every alert sounds the same</h1>
+          <h1>Workarounds when every alert sounds the same</h1>
           <p>
-            Alert Ready uses cell broadcast—not apps. Uninstalling weather or news apps
-            does not stop Wireless Public Alerting. Some workarounds reduce noise; they
-            also reduce your ability to receive legitimate warnings. Tiered alerts are
-            the systemic fix.
+            Alert Ready uses cell broadcast. Uninstalling apps does not stop it.
+            Workarounds cut noise and also cut real warnings. Tiers fix the system.
           </p>
         </div>
       </section>
@@ -56,33 +46,26 @@ export default function WorkaroundsPage() {
             <article className="workaround-item">
               <div>
                 <h3>Airplane mode</h3>
-                <div className="effect">Stops Alert Ready while enabled</div>
+                <div className="effect">Stops Alert Ready while on</div>
               </div>
               <p>
-                Cell broadcast requires an active cellular connection. Airplane mode
-                blocks WPA. Many people use this at night—and miss alerts if they forget
-                to turn connectivity back on.
+                Blocks cell broadcast. Common at night—and you miss alerts until you
+                reconnect.
               </p>
             </article>
             <article className="workaround-item">
               <div>
                 <h3>Power off</h3>
-                <div className="effect">No alerts when the phone is off</div>
+                <div className="effect">No alerts while off</div>
               </div>
-              <p>
-                A powered-down phone will not receive WPA. Effective, but you lose all
-                reachability until you power back on.
-              </p>
+              <p>Works. You are unreachable until the phone is on again.</p>
             </article>
             <article className="workaround-item">
               <div>
-                <h3>Keep the phone away from bed</h3>
-                <div className="effect">May reduce sleep disruption; does not stop delivery</div>
+                <h3>Phone away from bed</h3>
+                <div className="effect">May help sleep; does not stop delivery</div>
               </div>
-              <p>
-                Moving the phone to another room may help you sleep through audible
-                alerts. The alert still arrives; you may simply not hear it in time.
-              </p>
+              <p>The alert still arrives. You may not hear it in time.</p>
             </article>
             <article className="workaround-item">
               <div>
@@ -90,29 +73,27 @@ export default function WorkaroundsPage() {
                 <div className="effect">Does not stop Alert Ready</div>
               </div>
               <p>
-                WPA is delivered by your carrier via cell broadcast, not through optional
-                apps. Removing apps may change other notifications, but it will not
-                disable Alert Ready. If a settings screen offers “Emergency alerts” or
-                “severe” toggles on a U.S.-oriented phone, turning them off can silence
-                all Canadian WPA—because Canada uses only the highest tier.
+                WPA is carrier cell broadcast. On some U.S.-oriented phones, turning off
+                “severe” or emergency toggles can silence all Canadian WPA because Canada
+                uses only the highest tier.
               </p>
             </article>
           </div>
 
-          <div className="assistant reveal" ref={assistantRef}>
-            <h3>Guided help</h3>
-            <p>
-              Pick what you are trying to do. This is on-page guidance—not a substitute
-              for official emergency instructions—and it will steer you toward accurate
-              options (including when uninstalling will not help).
-            </p>
-            <div className="assistant-options" role="radiogroup" aria-label="What are you trying to do?">
+          <div className="assistant">
+            <h3>Quick help</h3>
+            <p>What are you trying to do?</p>
+            <div
+              className="assistant-options"
+              role="radiogroup"
+              aria-label="What are you trying to do?"
+            >
               {(
                 [
-                  ['sleep', 'I need uninterrupted sleep tonight'],
-                  ['quiet-day', 'I want fewer Alert Ready interruptions'],
-                  ['understand', 'I want to uninstall the alerting software'],
-                  ['stay-safe', 'I want to stay reachable for real emergencies'],
+                  ['sleep', 'Uninterrupted sleep tonight'],
+                  ['quiet-day', 'Fewer Alert Ready interruptions'],
+                  ['understand', 'Uninstall the alerting software'],
+                  ['stay-safe', 'Stay reachable for real emergencies'],
                 ] as const
               ).map(([value, label]) => (
                 <label key={value}>
@@ -130,13 +111,12 @@ export default function WorkaroundsPage() {
             <div className="assistant-result" aria-live="polite">
               <strong>{advice.title}</strong>
               <p>{advice.body}</p>
-              <p style={{ marginTop: '0.75rem' }}>{advice.next}</p>
             </div>
           </div>
 
           <p className="note-callout">
-            Ready to push for the real fix?{' '}
-            <Link to="/#take-action">Email the Minister and contact your MLA</Link>.
+            <Link to="/#take-action">Email the Minister and your MLA</Link> for the system
+            fix.
           </p>
         </div>
       </section>

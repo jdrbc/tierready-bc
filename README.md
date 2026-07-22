@@ -27,7 +27,7 @@ Preview (with GitHub Pages base path): http://127.0.0.1:4173/tierready-bc/
 
 Pushes to `main` deploy via GitHub Actions to GitHub Pages:
 
-https://jdrbc.github.io/tierready-bc/
+https://jdrbc.ca/tierready-bc/
 
 ## Notes
 

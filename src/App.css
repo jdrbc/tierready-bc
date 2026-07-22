@@ -124,6 +124,11 @@
   margin-top: 0.5rem;
 }
 
+.tier-compare-wide {
+  margin-top: var(--space-3);
+  max-width: 42rem;
+}
+
 .tier-row {
   display: grid;
   grid-template-columns: 7.5rem 1fr;
@@ -166,11 +171,26 @@
   color: rgba(247, 251, 251, 0.78);
 }
 
+.stat-band-note {
+  margin-top: var(--space-3);
+  max-width: 42rem;
+  color: rgba(247, 251, 251, 0.72);
+  font-size: 0.95rem;
+}
+
+.stat-band-note a {
+  color: var(--signal-bright);
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   margin-top: var(--space-3);
+}
+
+.stats-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .stat {
@@ -311,6 +331,11 @@
   font-weight: 700;
   color: var(--sea);
   min-height: 1.2em;
+}
+
+.hero-toast {
+  color: var(--signal-bright);
+  min-height: 1.4em;
 }
 
 .page-hero {
