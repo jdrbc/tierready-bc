@@ -6,9 +6,11 @@ import App from './App.tsx'
 import HomePage from './pages/HomePage.tsx'
 import WorkaroundsPage from './pages/WorkaroundsPage.tsx'
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />

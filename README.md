@@ -21,6 +21,14 @@ npm run build
 npm run preview
 ```
 
+Preview (with GitHub Pages base path): http://127.0.0.1:4173/tierready-bc/
+
+## Deploy
+
+Pushes to `main` deploy via GitHub Actions to GitHub Pages:
+
+https://jdrbc.github.io/tierready-bc/
+
 ## Notes
 
 - Alert counts: [alertready.ca/alert-count](https://www.alertready.ca/alert-count/)

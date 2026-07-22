@@ -6,8 +6,15 @@ export default function App() {
   const location = useLocation()
 
   useEffect(() => {
+    if (location.hash) {
+      const target = document.getElementById(location.hash.slice(1))
+      if (target) {
+        target.scrollIntoView()
+        return
+      }
+    }
     window.scrollTo(0, 0)
-  }, [location.pathname])
+  }, [location.pathname, location.hash])
 
   return (
     <div className="site-shell">
@@ -20,12 +27,12 @@ export default function App() {
           <span className="mark">BC</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">
-          <a href="/#how-it-works">How it works</a>
-          <a href="/#the-cost">The cost</a>
+          <Link to="/#how-it-works">How it works</Link>
+          <Link to="/#the-cost">The cost</Link>
           <Link to="/workarounds">Workarounds</Link>
-          <a className="nav-cta" href="/#take-action">
+          <Link className="nav-cta" to="/#take-action">
             Take action
-          </a>
+          </Link>
         </nav>
       </header>
       <Outlet />
@@ -58,7 +65,7 @@ export default function App() {
             {' · '}
             <Link to="/workarounds">Workarounds</Link>
             {' · '}
-            <a href="/#take-action">Contact your MLA &amp; Minister</a>
+            <Link to="/#take-action">Contact your MLA &amp; Minister</Link>
           </p>
         </div>
       </footer>
