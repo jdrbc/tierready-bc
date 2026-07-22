@@ -1,10 +1,13 @@
-# TierReady BC
+# BC Alert Reform
 
 Advocacy website urging British Columbia to use **tiered Alert Ready / Wireless Public Alerting** instead of sending every wireless emergency alert at the highest, non-opt-out priority.
 
+**Brand:** BC Alert Reform  
+**Subtitle:** Sensible alerting
+
 ## Pages
 
-- **Home** (`/`) — overview of the single-tier problem, alert counts, estimated sleep disruption, qualitative opt-out patterns, and CTAs to email the Minister / contact your MLA (with copyable letter).
+- **Home** (`/`) — overview of the single-tier problem, alert counts, estimated sleep disruption, and CTAs to email the Minister / contact your MLA (with copyable letter).
 - **Workarounds** (`/workarounds`) — airplane mode, power off, phone-away-from-bed, and accurate guidance that uninstalling apps does **not** stop cell-broadcast Alert Ready, plus a guided helper.
 
 ## Develop

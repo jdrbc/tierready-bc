@@ -22,9 +22,8 @@ export default function App() {
         Skip to content
       </a>
       <header className="site-header">
-        <Link to="/" className="brand-lockup" aria-label="TierReady BC home">
-          <span className="brand">TierReady</span>
-          <span className="mark">BC</span>
+        <Link to="/" className="brand-lockup" aria-label="BC Alert Reform home">
+          <span className="brand">BC Alert Reform</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">
           <Link to="/#how-it-works">Overview</Link>
@@ -38,7 +37,8 @@ export default function App() {
       <Outlet />
       <footer className="site-footer">
         <div className="section-inner">
-          <div className="brand">TierReady BC</div>
+          <div className="brand">BC Alert Reform</div>
+          <p className="footer-tagline">Sensible alerting</p>
           <p>
             An advocacy site, not a government service. Alert counts are from{' '}
             <a href="https://www.alertready.ca/alert-count/" rel="noreferrer" target="_blank">
